@@ -27,10 +27,10 @@ class SRFEventCalendarModHooks
 	 * @param array $vars
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		$vars['wgSRFEventCalendarModEnabled'] = $GLOBALS['wgSRFEventCalendarModEnabled'];
-		$vars['wgSRFEventCalendarModButtonText'] = $GLOBALS['wgSRFEventCalendarModButtonText'];
-		$vars['wgSRFEventCalendarModTargetURL'] = $GLOBALS['wgSRFEventCalendarModTargetURL'];
-		$vars['wgSRFEventCalendarModTargetFrame'] = $GLOBALS['wgSRFEventCalendarModTargetFrame'];
+		if( $GLOBALS['wgSRFEventCalendarModEnabled'] ) {
+			$vars['wgSRFEventCalendarModTargetURL'] = $GLOBALS['wgSRFEventCalendarModTargetURL'];
+			$vars['wgSRFEventCalendarModTargetFrame'] = $GLOBALS['wgSRFEventCalendarModTargetFrame'];
+		}
 	}
 
 }

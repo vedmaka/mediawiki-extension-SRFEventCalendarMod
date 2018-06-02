@@ -3,6 +3,7 @@ The extension allows to add an extra button to SRF `eventcalendar` format which 
 == Requirements ==
 
 * Mediawiki 1.25+
+* SMW 2.5+
 * SRF 2.5.5+
 
 == Setup ==

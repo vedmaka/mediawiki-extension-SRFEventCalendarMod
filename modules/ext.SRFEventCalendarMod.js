@@ -1,8 +1,8 @@
 $( function () {
 
 	var buttonText = mw.msg( 'srfeventcalendarmod-button-text' );
-	var buttonLink = mw.config.get( 'wgSRFEventcalendarModTargetURL' );
-	var linkFrame = mw.config.get( 'wgSRFEventcalendarModTargetFrame' );
+	var buttonLink = mw.config.get( 'wgSRFEventCalendarModTargetURL' );
+	var linkFrame = mw.config.get( 'wgSRFEventCalendarModTargetFrame' );
 
 	$( document ).ready( function () {
 
