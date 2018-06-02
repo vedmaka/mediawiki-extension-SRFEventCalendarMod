@@ -1,0 +1,55 @@
+{
+	"name": "SRFEventCalendarMod",
+	"version": "0.0.1",
+	"author": [
+		"Alexey"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SRFEventCalendarMod",
+	"descriptionmsg": "srfeventcalendarmod-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+		"SRFEventCalendarModHooks": "SRFEventCalendarMod.hooks.php"
+	},
+	"config": {
+		"SRFEventCalendarModEnabled": true,
+		"SRFEventCalendarModTargetURL": "https://mediawiki.org",
+		"SRFEventCalendarModTargetFrame": "page"
+	},
+	"callback": "SRFEventCalendarModHooks::onExtensionLoad",
+	"Hooks": {
+		"BeforePageDisplay": [
+			"SRFEventCalendarModHooks::onBeforePageDisplay"
+		],
+		"ResourceLoaderGetConfigVars": [
+			"SRFEventCalendarModHooks::onResourceLoaderGetConfigVars"
+		]
+	},
+	"MessagesDirs": {
+		"SRFEventCalendarMod": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.srfeventcalendarmod": {
+			"scripts": [
+				"modules/ext.SRFEventCalendarMod.js"
+			],
+			"styles": [
+				"modules/ext.SRFEventCalendarMod.css"
+			],
+			"messages": [
+				"srfeventcalendarmod-button-text"
+			],
+			"position": "bottom"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SRFEventCalendarMod"
+	},
+	"SpecialPages": {
+		"SRFEventCalendarMod": "SpecialSRFEventCalendarMod"
+	},
+	"manifest_version": 1
+}
