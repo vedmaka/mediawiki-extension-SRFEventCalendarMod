@@ -21,3 +21,4 @@ The extension allows to add an extra button to SRF `eventcalendar` format which 
   - `page` — will navigate user to the link within the same page
   - `blank` — will open a new page
   - `view` — will load specified URL within calendar frame (replacing calendar)
+- To configure button text edit `srfeventcalendarmod-button-text` message page via `Mediawiki:srfeventcalendarmod-button-text`
