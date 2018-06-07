@@ -16,7 +16,6 @@
 		"SRFEventCalendarModTargetURL": "https://mediawiki.org",
 		"SRFEventCalendarModTargetFrame": "page"
 	},
-	"callback": "SRFEventCalendarModHooks::onExtensionLoad",
 	"Hooks": {
 		"BeforePageDisplay": [
 			"SRFEventCalendarModHooks::onBeforePageDisplay"
@@ -33,23 +32,18 @@
 	"ResourceModules": {
 		"ext.srfeventcalendarmod": {
 			"scripts": [
+				"modules/ext.SRFEventCalendarMod.class.js",
 				"modules/ext.SRFEventCalendarMod.js"
-			],
-			"styles": [
-				"modules/ext.SRFEventCalendarMod.css"
 			],
 			"messages": [
 				"srfeventcalendarmod-button-text"
 			],
-			"position": "bottom"
+			"position": "top"
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
 		"remoteExtPath": "SRFEventCalendarMod"
-	},
-	"SpecialPages": {
-		"SRFEventCalendarMod": "SpecialSRFEventCalendarMod"
 	},
 	"manifest_version": 1
 }

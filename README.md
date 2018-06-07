@@ -1,12 +1,12 @@
 The extension allows to add an extra button to SRF `eventcalendar` format which will redirect users to a specified url.
 
-![image](https://user-images.githubusercontent.com/592009/40874779-457ed4c2-667c-11e8-9c91-6c9db5612227.png)
+![image](https://user-images.githubusercontent.com/592009/41126192-6e39285e-6aaf-11e8-8f16-0679f9e58563.png)
 
 # Requirements
 
 * Mediawiki 1.25+
-* SMW 2.5+
-* SRF 2.5.5+
+* SMW 3.0+
+* SRF 3.0+
 
 # Setup
 

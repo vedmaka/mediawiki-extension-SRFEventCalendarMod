@@ -1,9 +1,9 @@
 {
-  "@metadata": {
-    "authors": [
-      "Alexey"
-    ]
-  },
-  "srfeventcalendarmod-desc": "Adds a new button to eventcalendar SRF with configurable text and link",
-  "srfeventcalendarmod-button-text": "Hello world!"
+	"@metadata": {
+		"authors": [
+			"Alexey"
+		]
+	},
+	"srfeventcalendarmod-desc": "Adds a new button to eventcalendar SRF with configurable text and link",
+	"srfeventcalendarmod-button-text": "Hello world!"
 }
