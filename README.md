@@ -1,6 +1,6 @@
 The extension allows to add an extra view-button to SRF `eventcalendar` format which load a specified url into calendar view.
 
-![image](https://user-images.githubusercontent.com/592009/41126192-6e39285e-6aaf-11e8-8f16-0679f9e58563.png)
+![image](https://user-images.githubusercontent.com/592009/41465809-57a9ee80-70a8-11e8-8257-0557dd3767f3.png)
 
 # Requirements
 
