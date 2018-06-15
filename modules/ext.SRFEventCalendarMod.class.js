@@ -11,7 +11,6 @@
 		this.calendar = null;
 		this.buttonText = mw.msg( 'srfeventcalendarmod-button-text' );
 		this.buttonLink = mw.config.get( 'wgSRFEventCalendarModTargetURL' );
-		this.linkFrame = mw.config.get( 'wgSRFEventCalendarModTargetFrame' );
 		this.wasTriggered = false;
 
 		this.init();
@@ -42,49 +41,20 @@
 			// Fetch original header configuration
 			headerConfig = this.calendar.fullCalendar( 'option', 'header' );
 			// Add our custom button to the left button-set
-			headerConfig.left += ' srfEventCalendarModButton';
+			headerConfig.left += ',srfeventcalendarview'; // srfEventCalendarModButton';
 			// Update calendar configuration dynamically
 			this.calendar.fullCalendar( 'option', {
-				customButtons: {
-					srfEventCalendarModButton: {
-						text: this.buttonText,
-						click: this.onButtonClick.bind( this )
+				header: headerConfig,
+				views: {
+					srfeventcalendarview: {
+						type: 'srfeventcalendarview',
+						buttonLink: this.buttonLink
 					}
 				},
-				header: headerConfig
+				buttonText: {
+					srfeventcalendarview: this.buttonText
+				}
 			} );
-		}
-	};
-
-	/**
-	 * Button click event handler
-	 *
-	 * @param {Event} event
-	 */
-	SRFEventCalendarMod.prototype.onButtonClick = function ( event ) {
-		var $frame, targetHeight;
-
-		event.preventDefault();
-		switch ( this.linkFrame ) {
-			// Redirects visitor to the link
-			case 'page':
-				window.location.href = this.buttonLink;
-				break;
-			// Opens the link in a new window (be aware of popup blockers )
-			case 'blank':
-				window.open( this.buttonLink );
-				break;
-			// Loads the link inside of iframe appended to the current page (replacing calendar view)
-			case 'view':
-				$frame = $( '<iframe />' );
-				targetHeight = $( this.$element ).height();
-				$frame.attr( 'src', this.buttonLink );
-				$frame.css( 'width', '100%' );
-				$frame.css( 'min-height', targetHeight + 'px' );
-				$frame.css( 'border', '0' );
-				$( this.$element ).css( 'height', 'auto' );
-				$( this.$element ).html( '' ).append( $frame );
-				break;
 		}
 	};
 

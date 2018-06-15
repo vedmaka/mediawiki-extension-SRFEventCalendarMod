@@ -13,8 +13,7 @@
 	},
 	"config": {
 		"SRFEventCalendarModEnabled": true,
-		"SRFEventCalendarModTargetURL": "https://mediawiki.org",
-		"SRFEventCalendarModTargetFrame": "page"
+		"SRFEventCalendarModTargetURL": "https://mediawiki.org"
 	},
 	"Hooks": {
 		"BeforePageDisplay": [
@@ -30,6 +29,14 @@
 		]
 	},
 	"ResourceModules": {
+		"ext.srfeventcalendarmod.view": {
+			"scripts": [
+				"modules/ext.SRFEventCalendarModView.js"
+			],
+			"dependencies": [
+				"ext.jquery.fullcalendar"
+			]
+		},
 		"ext.srfeventcalendarmod": {
 			"scripts": [
 				"modules/ext.SRFEventCalendarMod.class.js",
@@ -39,6 +46,11 @@
 				"srfeventcalendarmod-button-text"
 			],
 			"position": "top"
+		},
+		"ext.srfeventcalendarmod.styles": {
+			"styles": [
+				"modules/ext.SRFEventCalendarMod.less"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

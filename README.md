@@ -1,4 +1,4 @@
-The extension allows to add an extra button to SRF `eventcalendar` format which will redirect users to a specified url.
+The extension allows to add an extra view-button to SRF `eventcalendar` format which load a specified url into calendar view.
 
 ![image](https://user-images.githubusercontent.com/592009/41126192-6e39285e-6aaf-11e8-8f16-0679f9e58563.png)
 
@@ -16,9 +16,5 @@ The extension allows to add an extra button to SRF `eventcalendar` format which 
 # Configuration
 
 - `$wgSRFEventCalendarModEnabled` — could be set to `false` or `true`, allows to enable or disable extension
-- `$wgSRFEventCalendarModTargetURL` — url user will be redirected when clicking the button
-- `$wgSRFEventCalendarModTargetFrame` — could be set to:
-  - `page` — will navigate user to the link within the same page
-  - `blank` — will open a new page
-  - `view` — will load specified URL within calendar frame (replacing calendar)
+- `$wgSRFEventCalendarModTargetURL` — url to be loaded into calendar view. Please be aware of CORS policy!
 - To configure button text edit `srfeventcalendarmod-button-text` message page via `Mediawiki:srfeventcalendarmod-button-text`

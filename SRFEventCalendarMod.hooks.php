@@ -14,6 +14,8 @@ class SRFEventCalendarModHooks {
 	 */
 	public static function onBeforePageDisplay( &$out, &$skin ) {
 		if ( $GLOBALS['wgSRFEventCalendarModEnabled'] ) {
+			$out->addModuleStyles( 'ext.srfeventcalendarmod.styles' );
+			$out->addModules( 'ext.srfeventcalendarmod.view' );
 			$out->addModules( 'ext.srfeventcalendarmod' );
 		}
 	}
